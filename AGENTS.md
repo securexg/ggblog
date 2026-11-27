@@ -27,8 +27,8 @@ After deploying, verify both `https://inklog.pages.dev/` and the new `/posts/<sl
 
 ## Adding a New Article
 When the user shares rough notes for a new story:
-1. Create `posts/<slug>.html` matching `posts/keeping-a-simple-notebook.html` (includes reading progress bar, `.article-header` with `.author-row`, `.article-hero-img`, `.prose` body, `.wide-block` / `.table-wrap` for tables, `.inline-figure` for visuals, `.share-bar`, and minimal copyright + email footer).
-2. Keep all reader-facing copy natural and human. Never mention GitHub, Cloudflare, Cloudinary, HTML, or dictation/transcripts in public copy.
+1. Create `posts/<slug>.html` matching `posts/keeping-a-simple-notebook.html` (includes Open Graph / Twitter Card `og:image` meta tags for automatic link previews, reading progress bar, `.article-header`, `.article-hero-img`, `.prose` body, `.wide-block` / `.table-wrap` for tables, `.inline-figure` for visuals, `.share-bar` with Copy link / WhatsApp / X / LinkedIn, and minimal footer with anonymous author box, copyright, and email link).
+2. Keep all reader-facing copy natural and human. Never mention the author's personal name, GitHub, Cloudflare, Cloudinary, HTML, or dictation/transcripts in public copy.
 3. Add a new `<article class="post-card">` at the **top** of `#postGrid` in `index.html` with accurate `data-tag`, `data-title`, and `data-desc` attributes (lowercase) so search and filtering work.
 4. If introducing a new category tag, add a matching `<button class="filter-btn" data-filter="<tag>">` inside `#filterGroup` in `index.html`.
 5. Update the `"Latest"` nav link in `index.html` to point to the newest post.

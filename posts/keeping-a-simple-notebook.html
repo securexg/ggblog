@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Why I Still Keep a Simple Paper Notebook | Inklog</title>
   <meta name="description" content="Notes on slowing down, stepping away from noisy apps, and keeping a quiet place for everyday thoughts." />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Inklog" />
+  <meta property="og:title" content="Why I Still Keep a Simple Paper Notebook" />
+  <meta property="og:description" content="Notes on slowing down, stepping away from noisy apps, and keeping a quiet place for everyday thoughts." />
+  <meta property="og:url" content="https://inklog.pages.dev/posts/keeping-a-simple-notebook" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1400&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Why I Still Keep a Simple Paper Notebook" />
+  <meta name="twitter:description" content="Notes on slowing down, stepping away from noisy apps, and keeping a quiet place for everyday thoughts." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1400&q=80" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,15 +42,6 @@
       </div>
       <h1>Why I Still Keep a Simple Paper Notebook</h1>
       <p class="article-subtitle">Most writing apps try to do too much. Sometimes the best way to think clearly is a quiet page with nothing asking for your attention.</p>
-      <div class="author-row">
-        <div class="author-info">
-          <div class="author-avatar" aria-hidden="true">G</div>
-          <div>
-            <div class="author-name">Gaurav</div>
-            <div class="author-sub">Personal notes &amp; essays</div>
-          </div>
-        </div>
-      </div>
     </header>
 
     <figure class="article-hero-img">
@@ -116,6 +117,12 @@
           </svg>
           <span id="copyLabel">Copy link</span>
         </button>
+        <a class="share-btn" id="shareWhatsApp" target="_blank" rel="noopener noreferrer" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+          WhatsApp
+        </a>
         <a class="share-btn" id="shareX" target="_blank" rel="noopener noreferrer" href="#">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M4 4l11.733 16h4.267l-11.733-16z"></path>
@@ -136,6 +143,10 @@
   </main>
 
   <footer class="site-footer">
+    <div class="footer-author">
+      <div class="footer-author-title">About the author</div>
+      <p>Just a personal notebook of everyday observations, quiet stories, and simple comparisons.</p>
+    </div>
     <div class="footer-inner">
       <span>&copy; 2026 Inklog. All rights reserved.</span>
       <div class="footer-links">
@@ -154,6 +165,8 @@
 
     const pageUrl = encodeURIComponent(window.location.href);
     const pageTitle = encodeURIComponent(document.title);
+    const waText = encodeURIComponent(document.title + ' ' + window.location.href);
+    document.getElementById('shareWhatsApp').href = `https://wa.me/?text=${waText}`;
     document.getElementById('shareX').href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
     document.getElementById('shareLinkedIn').href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
 
