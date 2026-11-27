@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect | Inklog</title>
+  <meta name="description" content="Send a note or connect directly." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-title">Inklog</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/">Articles</a>
+        <a href="/contact" aria-current="page">Connect</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="contact-wrap">
+      <h1>Get in touch</h1>
+      <p class="contact-intro">Have a thought on something you read, or just want to say hello? Send a note below.</p>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="hp-field" aria-hidden="true">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name" />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Write your message..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">Send message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-author">
+      <div class="footer-author-title">About the author</div>
+      <p>Just a personal notebook of everyday observations, quiet stories, and simple comparisons.</p>
+    </div>
+    <div class="footer-inner">
+      <span>&copy; 2026 Inklog. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="/">All articles</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const statusEl = document.getElementById('formStatus');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      statusEl.textContent = '';
+      statusEl.className = 'form-status';
+
+      const payload = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        message: form.message.value.trim(),
+        website: form.website.value.trim()
+      };
+
+      if (!payload.name || !payload.email || !payload.message) {
+        statusEl.textContent = 'Please fill in your name, email, and message.';
+        statusEl.classList.add('is-error');
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+
+        if (!res.ok) {
+          throw new Error(data.error || 'Could not send message.');
+        }
+
+        statusEl.textContent = 'Message sent. Thanks for reaching out.';
+        statusEl.classList.add('is-success');
+        form.reset();
+      } catch (err) {
+        statusEl.textContent = err.message || 'Something went wrong. Please try again.';
+        statusEl.classList.add('is-error');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send message';
+      }
+    });
+  </script>
+</body>
+</html>

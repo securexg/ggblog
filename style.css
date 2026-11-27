@@ -639,3 +639,116 @@ tr:last-child td {
 .footer-links a:hover {
   color: var(--ink);
 }
+
+/* Contact Page */
+.contact-wrap {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.contact-wrap h1 {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.contact-intro {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin: 0 0 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.75rem 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: border-color var(--transition);
+}
+
+.field input {
+  min-height: 46px;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.submit-btn {
+  align-self: flex-start;
+  min-height: 46px;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), opacity var(--transition);
+}
+
+.submit-btn:hover {
+  background: var(--accent);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-status {
+  margin: 0;
+  font-size: 0.92rem;
+  min-height: 1.4em;
+}
+
+.form-status.is-success {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.form-status.is-error {
+  color: #b91c1c;
+  font-weight: 500;
+}
