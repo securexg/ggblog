@@ -29,9 +29,9 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1rem;
-  line-height: 1.72;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -135,9 +135,9 @@ a:hover {
 }
 
 h1, h2, h3 {
-  font-family: 'Newsreader', Georgia, serif;
-  line-height: 1.18;
-  letter-spacing: -0.02em;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.16;
+  letter-spacing: -0.028em;
   color: var(--ink);
   margin: 0;
   text-wrap: balance;
@@ -440,7 +440,10 @@ p {
 .prose {
   max-width: var(--max-prose);
   margin: 0 auto;
-  font-size: 1.06rem;
+  font-family: 'Charter', 'Source Serif 4', Georgia, Cambria, 'Times New Roman', serif;
+  font-size: 1.22rem;
+  line-height: 1.62;
+  letter-spacing: -0.003em;
 }
 
 .prose h2 {
@@ -473,9 +476,10 @@ p {
   background: var(--surface-subtle);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  font-family: 'Newsreader', Georgia, serif;
-  font-size: 1.35rem;
-  line-height: 1.45;
+  font-family: 'Charter', 'Source Serif 4', Georgia, serif;
+  font-style: italic;
+  font-size: 1.32rem;
+  line-height: 1.48;
   color: var(--ink);
 }
 
