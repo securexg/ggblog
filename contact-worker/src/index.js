@@ -53,7 +53,7 @@ export default {
         );
       }
 
-      const fromAddress = env.FROM_EMAIL || "noreply@anshumankhullar.com";
+      const fromAddress = env.FROM_EMAIL || "noreply@splweb.xyz";
       const toAddress = "gauravgg.in@gmail.com";
       const raw = buildRawEmail({
         from: fromAddress,
