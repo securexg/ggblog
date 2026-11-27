@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inklog | Dictated Stories &amp; Visual Notes</title>
-  <meta name="description" content="A personal blog for dictated stories, comparison tables, and visual write-ups." />
+  <title>Inklog | Personal Stories &amp; Notes</title>
+  <meta name="description" content="A quiet personal blog for stories, everyday observations, and simple comparisons." />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,52 +14,49 @@
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a href="/" class="brand-link" aria-label="Inklog home">
-        <img src="/assets/logo-primary.svg" alt="Inklog" class="brand-logo" />
-      </a>
+      <a href="/" class="site-title">Inklog</a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="/" aria-current="page">Stories</a>
-        <a href="/posts/why-dictate-stories.html">Latest</a>
-        <a href="/brand.html">Logos</a>
+        <a href="/" aria-current="page">Articles</a>
+        <a href="/posts/keeping-a-simple-notebook.html">Latest</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <h1>Stories worth keeping, written out loud.</h1>
-      <p>Inklog is a quiet personal blog for dictated essays, visual breakdowns, and side-by-side comparisons without editor clutter or paywalls.</p>
+      <h1>Stories and quiet notes worth keeping.</h1>
+      <p>A personal space for honest writing, everyday observations, and simple side-by-side comparisons.</p>
     </section>
 
-    <div class="toolbar" role="region" aria-label="Filter and search stories">
+    <div class="toolbar" role="region" aria-label="Filter and search articles">
       <div class="filter-group" id="filterGroup">
         <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
-        <button class="filter-btn" type="button" data-filter="workflow" aria-pressed="false">Workflow</button>
+        <button class="filter-btn" type="button" data-filter="notes" aria-pressed="false">Notes</button>
       </div>
       <div class="search-wrap">
         <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <circle cx="11" cy="11" r="8"></circle>
           <path d="M21 21l-4.35-4.35"></path>
         </svg>
-        <input type="search" id="searchInput" class="search-input" placeholder="Search stories..." aria-label="Search stories" />
+        <input type="search" id="searchInput" class="search-input" placeholder="Search articles..." aria-label="Search articles" />
       </div>
     </div>
 
     <section class="post-grid" id="postGrid">
-      <article class="post-card" data-tag="workflow" data-title="why i stopped fighting text editors and started dictating visual stories" data-desc="how speaking a rough draft out loud and turning it into a clean html page beats wrestling with rigid blog editors">
-        <a href="/posts/why-dictate-stories.html" class="post-card-media">
-          <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80" alt="Fountain pen and open notebook on a wooden desk" />
+      <article class="post-card" data-tag="notes" data-title="why i still keep a simple paper notebook" data-desc="notes on slowing down, stepping away from noisy apps, and keeping a quiet place for everyday thoughts">
+        <a href="/posts/keeping-a-simple-notebook.html" class="post-card-media">
+          <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80" alt="Pen resting on an open notebook on a wooden desk" />
         </a>
         <div class="post-card-body">
           <div class="post-meta">
-            <span class="tag-pill">Workflow</span>
+            <span class="tag-pill">Notes</span>
             <span>Nov 27, 2026</span>
             <span>3 min read</span>
           </div>
-          <h2><a href="/posts/why-dictate-stories.html">Why I Stopped Fighting Text Editors and Started Dictating Visual Stories</a></h2>
-          <p>How speaking a rough draft out loud and turning it into a clean HTML page beats wrestling with rigid blog editors.</p>
-          <a href="/posts/why-dictate-stories.html" class="read-link">
-            Read story
+          <h2><a href="/posts/keeping-a-simple-notebook.html">Why I Still Keep a Simple Paper Notebook</a></h2>
+          <p>Notes on slowing down, stepping away from noisy apps, and keeping a quiet place for everyday thoughts.</p>
+          <a href="/posts/keeping-a-simple-notebook.html" class="read-link">
+            Read article
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M5 12h14"></path>
               <path d="M12 5l7 7-7 7"></path>
@@ -70,16 +67,15 @@
     </section>
 
     <div class="empty-state" id="emptyState" role="status">
-      No stories match your search. Clear the filter or try another keyword.
+      No articles match your search. Clear the filter or try another keyword.
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <span>Inklog. Stored on GitHub, served on Cloudflare Pages.</span>
+      <span>&copy; 2026 Inklog. All rights reserved.</span>
       <div class="footer-links">
-        <a href="/brand.html">Brand &amp; Logos</a>
-        <a href="/posts/why-dictate-stories.html">Latest Story</a>
+        <a href="mailto:gauravgg.in@gmail.com">Connect by email</a>
       </div>
     </div>
   </footer>

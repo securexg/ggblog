@@ -21,18 +21,18 @@ After deploying, verify both `https://inklog.pages.dev/` and the new `/posts/<sl
 
 ## File Structure
 - `index.html` — Blog home page with topic filters (`#filterGroup`), live client-side search (`#searchInput`), and post grid (`#postGrid`).
-- `posts/<slug>.html` — Individual story pages (use `posts/why-dictate-stories.html` as the structural template).
+- `posts/<slug>.html` — Individual story pages (use `posts/keeping-a-simple-notebook.html` as the structural template).
 - `style.css` — Shared design system and responsive layout.
-- `brand.html` — SVG logo showcase and download page (`/brand`).
-- `assets/` — Brand SVGs (`logo-primary.svg`, `logo-monogram.svg`, `logo-wordmark.svg`) and `favicon.svg` at root.
+- `favicon.svg` — Site favicon at root.
 
-## Adding a New Dictated Article
-When the user dictates or shares rough notes for a new story:
-1. Create `posts/<slug>.html` matching `posts/why-dictate-stories.html` (includes reading progress bar, `.article-header` with `.author-row`, `.article-hero-img`, `.prose` body, `.wide-block` / `.table-wrap` for tables, `.inline-figure` for visuals, and `.share-bar`).
-2. Add a new `<article class="post-card">` at the **top** of `#postGrid` in `index.html` with accurate `data-tag`, `data-title`, and `data-desc` attributes (lowercase) so search and filtering work.
-3. If introducing a new category tag, add a matching `<button class="filter-btn" data-filter="<tag>">` inside `#filterGroup` in `index.html`.
-4. Update the `"Latest"` nav link in `index.html` and `brand.html` to point to the newest post.
-5. Verify any external stock image URLs (e.g. Unsplash) return `HTTP 200` before deploying.
+## Adding a New Article
+When the user shares rough notes for a new story:
+1. Create `posts/<slug>.html` matching `posts/keeping-a-simple-notebook.html` (includes reading progress bar, `.article-header` with `.author-row`, `.article-hero-img`, `.prose` body, `.wide-block` / `.table-wrap` for tables, `.inline-figure` for visuals, `.share-bar`, and minimal copyright + email footer).
+2. Keep all reader-facing copy natural and human. Never mention GitHub, Cloudflare, Cloudinary, HTML, or dictation/transcripts in public copy.
+3. Add a new `<article class="post-card">` at the **top** of `#postGrid` in `index.html` with accurate `data-tag`, `data-title`, and `data-desc` attributes (lowercase) so search and filtering work.
+4. If introducing a new category tag, add a matching `<button class="filter-btn" data-filter="<tag>">` inside `#filterGroup` in `index.html`.
+5. Update the `"Latest"` nav link in `index.html` to point to the newest post.
+6. Verify any external stock image URLs (e.g. Unsplash) return `HTTP 200` before deploying.
 
 ## Typography & Design Standards (Mandatory)
 - **Fonts:**

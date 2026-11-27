@@ -86,21 +86,20 @@ a:hover {
   flex-wrap: wrap;
 }
 
-.brand-link {
+.site-title {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
 }
 
-.brand-link:hover {
+.site-title:hover {
+  color: var(--accent);
   text-decoration: none;
-  opacity: 0.88;
-}
-
-.brand-logo {
-  height: 34px;
-  width: auto;
-  display: block;
 }
 
 .nav-links {
@@ -583,50 +582,6 @@ tr:last-child td {
 .share-btn svg {
   width: 16px;
   height: 16px;
-}
-
-/* Brand Logo Showcase */
-.logo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.logo-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.logo-preview {
-  height: 120px;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  display: grid;
-  place-items: center;
-  padding: 1.25rem;
-}
-
-.logo-preview img {
-  max-height: 68px;
-  max-width: 100%;
-}
-
-.logo-card h2 {
-  font-size: 1.25rem;
-}
-
-.logo-card p {
-  font-size: 0.92rem;
-  color: var(--muted);
-  margin: 0;
-  flex: 1;
 }
 
 /* Footer */
