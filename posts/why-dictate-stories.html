@@ -5,65 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Why I Stopped Fighting Text Editors | Inklog</title>
   <meta name="description" content="How speaking a rough draft out loud and turning it into a clean HTML page beats wrestling with rigid blog editors." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="header-inner">
-      <a href="/" class="brand">Inklog</a>
-      <nav class="nav-links">
+      <a href="/" class="brand-link" aria-label="Inklog home">
+        <img src="/assets/logo-primary.svg" alt="Inklog" class="brand-logo" />
+      </a>
+      <nav class="nav-links" aria-label="Primary">
         <a href="/">All Stories</a>
+        <a href="/brand.html">Logos</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <header class="article-header">
-      <span class="eyebrow">Workflow</span>
-      <h1>Why I Stopped Fighting Text Editors and Started Dictating Visual Stories</h1>
-      <p class="article-subtitle">Most blogging platforms force a choice between clean writing and rich visuals. Owning a simple HTML folder gives you both.</p>
       <div class="post-meta">
+        <span class="tag-pill">Workflow</span>
         <span>Nov 27, 2026</span>
         <span>3 min read</span>
-        <span>By Gaurav</span>
+      </div>
+      <h1>Why I Stopped Fighting Text Editors and Started Dictating Visual Stories</h1>
+      <p class="article-subtitle">Most blogging platforms force a choice between clean writing and rich visuals. Owning a simple HTML folder gives you both.</p>
+      <div class="author-row">
+        <div class="author-info">
+          <div class="author-avatar" aria-hidden="true">I</div>
+          <div>
+            <div class="author-name">Inklog Editorial</div>
+            <div class="author-sub">Dictated &amp; published on Cloudflare Pages</div>
+          </div>
+        </div>
       </div>
     </header>
 
     <figure class="article-hero-img">
-      <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1400&q=80" alt="Pen resting on a notebook on a quiet desk" />
+      <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1400&q=80" alt="Pen resting on an open notebook on a wooden desk" />
       <figcaption class="caption">Photo via Unsplash. Clean reading layouts work best when the page stays out of the way.</figcaption>
     </figure>
 
     <article class="prose">
       <p>When you only write occasionally, the hardest part of publishing is rarely the idea itself. It is the friction between having a thought and getting it onto a page that actually looks good when someone opens the link.</p>
 
-      <p>Hosted editors like Medium are great for plain paragraphs, right up until you want a clean comparison table, custom callout cards, or full control over how images sit on the screen. Paste raw HTML there and it breaks. Paste a table and it flattens.</p>
+      <p>Hosted editors like Medium are great for plain paragraphs, right up until you want a structured comparison table, custom visual framing, or full control over how images sit on the screen. Paste raw HTML there and it breaks. Paste a table and it flattens.</p>
 
-      <div class="stats-row">
-        <div class="stat-card">
-          <div class="stat-value">5 min</div>
-          <div class="stat-label">From voice note to live page</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">0</div>
-          <div class="stat-label">Paywalls, popups, or trackers</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">100%</div>
-          <div class="stat-label">Owned in GitHub and Pages</div>
-        </div>
-      </div>
+      <blockquote class="pull-quote">
+        Every story lives as a plain HTML file in one folder, backed up to GitHub and served globally on Cloudflare Pages. No database, no CMS updates, and no lock-in.
+      </blockquote>
 
       <h2>Speak the draft, shape the layout</h2>
-      <p>Instead of staring at a blinking cursor, it is much faster to talk through the story out loud. Once the ideas are out, turning that transcript into structured sections, a readable table, and a couple of well-placed photos takes moments.</p>
-
-      <div class="callout">
-        <strong>The rule for this space</strong>
-        Every post lives as a plain HTML file in one folder, backed up to GitHub and served globally on Cloudflare Pages. No database, no CMS updates, and no lock-in.
-      </div>
+      <p>Instead of staring at a blinking cursor, it is much faster to talk through the story out loud. Once the ideas are out, turning that transcript into clear sections, a readable comparison table, and well-placed photography takes minutes rather than hours.</p>
     </article>
 
     <div class="wide-block">
@@ -71,9 +69,9 @@
         <table>
           <thead>
             <tr>
-              <th>Approach</th>
+              <th>Publishing Setup</th>
               <th>Tables &amp; Custom Layout</th>
-              <th>Setup &amp; Storage</th>
+              <th>Storage &amp; Ownership</th>
               <th>Reader Experience</th>
             </tr>
           </thead>
@@ -88,13 +86,13 @@
               <td><strong>Notion</strong></td>
               <td>Native tables, HTML only in framed box</td>
               <td>Zero setup, stored in workspace</td>
-              <td>Great for docs, feels like a wiki</td>
+              <td>Great for internal docs, feels like a wiki</td>
             </tr>
             <tr>
               <td><strong>GitHub + Cloudflare Pages</strong></td>
               <td>Full HTML, CSS, tables, and visuals</td>
-              <td>One folder, backed up forever</td>
-              <td>Fast, ad-free, custom link</td>
+              <td>One local folder, backed up forever</td>
+              <td>Fast, ad-free, clean short URL</td>
             </tr>
           </tbody>
         </table>
@@ -108,12 +106,71 @@
       </figure>
 
       <h2>What comes next</h2>
-      <p>This first post is a living template. Whenever there is a new story to share, all it takes is dictating the rough version, dropping in the right visuals, and pushing one update so the link goes live.</p>
+      <p>This first post is a working baseline. Whenever there is a new story to share, all it takes is dictating the rough version, dropping in the right visuals, and pushing one update so the link goes live.</p>
     </article>
+
+    <section class="share-bar" aria-label="Share this story">
+      <span class="share-label">Share this story</span>
+      <div class="share-actions">
+        <button type="button" class="share-btn" id="copyLinkBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span id="copyLabel">Copy link</span>
+        </button>
+        <a class="share-btn" id="shareX" target="_blank" rel="noopener noreferrer" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 4l11.733 16h4.267l-11.733-16z"></path>
+            <path d="M4 20l6.768-6.768m2.46-2.46L20 4"></path>
+          </svg>
+          Post on X
+        </a>
+        <a class="share-btn" id="shareLinkedIn" target="_blank" rel="noopener noreferrer" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <a href="/">Back to all stories</a>
+    <div class="footer-inner">
+      <a href="/">Back to all stories</a>
+      <div class="footer-links">
+        <a href="/brand.html">Brand &amp; Logos</a>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    const progressBar = document.getElementById('progressBar');
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? Math.min(100, (window.scrollY / docHeight) * 100) : 0;
+      progressBar.style.width = pct + '%';
+    }, { passive: true });
+
+    const pageUrl = encodeURIComponent(window.location.href);
+    const pageTitle = encodeURIComponent(document.title);
+    document.getElementById('shareX').href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+    document.getElementById('shareLinkedIn').href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
+
+    const copyBtn = document.getElementById('copyLinkBtn');
+    const copyLabel = document.getElementById('copyLabel');
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        copyLabel.textContent = 'Copied';
+        setTimeout(() => { copyLabel.textContent = 'Copy link'; }, 2000);
+      } catch {
+        copyLabel.textContent = 'Copy failed';
+      }
+    });
+  </script>
 </body>
 </html>
