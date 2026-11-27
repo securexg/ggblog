@@ -40,9 +40,15 @@ When the user shares rough notes for a new story:
   - Body, UI & Article Prose (`.prose`): `Inter` (via Google Fonts, `1.12rem`, `line-height: 1.68`)
   - Metadata / Dates / Tags: `JetBrains Mono`
 - **Palette:** Canvas `#FAF9F6`, Surface `#FFFFFF`, Subtle `#F3F2EE`, Ink `#141413`, Muted `#4A4A48`, Border `#E5E4DF`, Accent `#0F766E`.
-- **Copy Rules:**
-  - Zero em-dashes (`—`) or en-dashes (`–`) in user-facing copy; use commas, periods, or colons.
-  - No AI cliché words (*elevate, unlock, seamless, next-gen, revolutionize, empower, streamline, supercharge, cutting-edge, game-changer, delve, tapestry, foster, leverage, robust, holistic*).
+- **Copy & Article Writing Rules (Mandatory):**
+  - **Preserve the author's voice & flow:** Keep the user's exact words, phrasing, and flow as-is. Only fix grammar and punctuation unless the user explicitly asks to change the structure or flow.
+  - **Short paragraphs & bullet points:** Break content into short, scannable paragraphs and use plenty of bullet points.
+  - **Bold key terms:** Bold important words and key takeaways whenever focus is needed.
+  - **Visuals & Gemini-created images:** Add as many helpful graphics, inline figures, and Gemini-generated images (saved under `images/<slug>/`) as needed to illustrate the story.
+  - **Research & clickable references:** Run live web research to verify facts, numbers, and claims, and include clickable reference links for verification.
+  - **Mobile-optimized tables:** Keep all comparison tables inside `.wide-block > .table-wrap` with concise columns so they read cleanly on phones.
+  - **Zero em-dashes (`—`) or en-dashes (`–`):** Never use em-dashes or en-dashes in user-facing copy; use commas, periods, or colons.
+  - **No AI cliché words:** Never use *elevate, unlock, seamless, next-gen, revolutionize, empower, streamline, supercharge, cutting-edge, game-changer, delve, tapestry, foster, leverage, robust, holistic*.
 - **Layout Rules:**
   - Keep `45-75ch` prose width (`--max-prose: 68ch`) and `>= 44px` touch targets on buttons/links.
   - No decorative eyebrow pills above headings, no `border-left` callout stripes, and no emoji icons (use inline SVGs).
