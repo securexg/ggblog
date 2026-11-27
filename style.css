@@ -388,6 +388,59 @@ p {
   margin: 0;
 }
 
+/* Collapsible Details / Myths & References */
+.myth-box {
+  margin: 1.5rem 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.myth-box summary {
+  padding: 0.95rem 1.15rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 44px;
+}
+
+.myth-box summary::-webkit-details-marker {
+  display: none;
+}
+
+.myth-box summary::after {
+  content: '+';
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.myth-box[open] summary::after {
+  content: '-';
+}
+
+.myth-box-body {
+  padding: 0 1.15rem 1.15rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.94rem;
+}
+
+.myth-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.myth-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
 @media (max-width: 720px) {
   .journey-timeline {
     grid-template-columns: 1fr;
@@ -555,6 +608,59 @@ p {
   color: var(--muted);
   line-height: 1.45;
   margin: 0;
+}
+
+/* Collapsible Details / Myths & References */
+.myth-box {
+  margin: 1.5rem 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.myth-box summary {
+  padding: 0.95rem 1.15rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 44px;
+}
+
+.myth-box summary::-webkit-details-marker {
+  display: none;
+}
+
+.myth-box summary::after {
+  content: '+';
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.myth-box[open] summary::after {
+  content: '-';
+}
+
+.myth-box-body {
+  padding: 0 1.15rem 1.15rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.94rem;
+}
+
+.myth-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.myth-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 @media (max-width: 720px) {
