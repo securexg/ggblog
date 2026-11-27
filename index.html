@@ -43,6 +43,7 @@
     <div class="toolbar" role="region" aria-label="Filter and search articles">
       <div class="filter-group" id="filterGroup">
         <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" type="button" data-filter="workflow" aria-pressed="false">Workflow</button>
       </div>
       <div class="search-wrap">
         <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -53,10 +54,24 @@
       </div>
     </div>
 
-    <section class="post-grid" id="postGrid"></section>
+    <section class="post-grid" id="postGrid">
+      <article class="post-card" data-tag="workflow" data-title="back to the terminal: how ai killed my need for guis" data-desc="from avoiding the command line on windows to running almost everything through a terminal, an ai agent, and voice commands on a mac.">
+        <a href="/posts/back-to-the-terminal.html" class="post-card-media">
+          <img src="/images/back-to-the-terminal/hero.jpg" alt="A vintage CRT monitor fading into a modern laptop with a glowing teal terminal prompt and voice soundwave" loading="lazy" />
+        </a>
+        <div class="post-card-body">
+          <div class="post-card-meta">
+            <span class="tag">Workflow</span>
+            <time datetime="2026-11-27">Nov 27, 2026</time>
+          </div>
+          <h2><a href="/posts/back-to-the-terminal.html">Back to the Terminal: How AI Killed My Need for GUIs</a></h2>
+          <p>I spent years avoiding the command line. Now, a terminal, an AI agent, and a dictation app are almost the only tools I need.</p>
+        </div>
+      </article>
+    </section>
 
-    <div class="empty-state visible" id="emptyState" role="status">
-      New stories coming soon.
+    <div class="empty-state" id="emptyState" role="status">
+      No matching articles found.
     </div>
   </main>
 
