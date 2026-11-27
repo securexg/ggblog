@@ -29,7 +29,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1rem;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -90,7 +90,7 @@ a:hover {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -134,7 +134,7 @@ a:hover {
 }
 
 h1, h2, h3 {
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.16;
   letter-spacing: -0.028em;
   color: var(--ink);
@@ -439,10 +439,10 @@ p {
 .prose {
   max-width: var(--max-prose);
   margin: 0 auto;
-  font-family: 'Charter', 'Source Serif 4', Georgia, Cambria, 'Times New Roman', serif;
-  font-size: 1.22rem;
-  line-height: 1.62;
-  letter-spacing: -0.003em;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.12rem;
+  line-height: 1.68;
+  letter-spacing: -0.006em;
 }
 
 .prose h2 {
@@ -475,7 +475,7 @@ p {
   background: var(--surface-subtle);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  font-family: 'Charter', 'Source Serif 4', Georgia, serif;
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
   font-style: italic;
   font-size: 1.32rem;
   line-height: 1.48;

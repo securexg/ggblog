@@ -36,8 +36,8 @@ When the user shares rough notes for a new story:
 
 ## Typography & Design Standards (Mandatory)
 - **Fonts:**
-  - Headings & UI: `DM Sans` (with `-apple-system, BlinkMacSystemFont, sans-serif`)
-  - Article Body & Pull Quotes (`.prose`, `.pull-quote`): `Charter` (native macOS/iOS) with `Source Serif 4` webfont fallback, `1.22rem`, `line-height: 1.62`
+  - Headings & Site Title: `Satoshi` (via Fontshare, with `-apple-system, BlinkMacSystemFont, sans-serif`)
+  - Body, UI & Article Prose (`.prose`): `Inter` (via Google Fonts, `1.12rem`, `line-height: 1.68`)
   - Metadata / Dates / Tags: `JetBrains Mono`
 - **Palette:** Canvas `#FAF9F6`, Surface `#FFFFFF`, Subtle `#F3F2EE`, Ink `#141413`, Muted `#4A4A48`, Border `#E5E4DF`, Accent `#0F766E`.
 - **Copy Rules:**
