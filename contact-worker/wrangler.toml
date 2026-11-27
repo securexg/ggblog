@@ -1,5 +1,5 @@
-name = "inklog"
-pages_build_output_dir = "."
+name = "inklog-contact"
+main = "src/index.js"
 compatibility_date = "2024-11-01"
 
 [[send_email]]
